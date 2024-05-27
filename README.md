@@ -19,7 +19,7 @@ $ pnpm run build --filter [name] # name 为项目名称
 ## 项目目录结构
 
 ```text
-limuen-monorepo-project
+monorepo-project
 ├─ apps                    # 项目文件
 │  └─ defaultProject       # 构建viteDemo
 │  └─ miniLocalLiftProject # Taro小程序Demo
