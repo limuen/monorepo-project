@@ -69,5 +69,8 @@
     "commitizen": {
       "path": "node_modules/cz-git"
     }
+  },
+  "dependencies": {
+    "@turbo/codemod": "1.13.3"
   }
 }
