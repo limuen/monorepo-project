@@ -2,12 +2,18 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
 
+interface MenuItem {
+  key: string;
+  label: string;
+}
+
 const Layout: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   const [selectedKeys, setSelectedKeys] = useState(["/"]);
-  const items: any[] = [
+
+  const items: MenuItem[] = [
     {
       key: "/lowcode/table",
       label: "表格"
