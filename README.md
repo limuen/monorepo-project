@@ -1,4 +1,4 @@
-# limuen-monorepo-project
+# monorepo-project
 
 基于 turborepo 开发项目。
 
