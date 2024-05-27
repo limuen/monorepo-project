@@ -1,0 +1,53 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDotEnv": [".env"],
+  "pipeline": {
+    "defaultProject#dev": {
+      "dependsOn": ["@limuen/viteconfig#build"],
+      "cache": false,
+      "persistent": true,
+      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+    },
+    "defaultProject#build": {
+      "dependsOn": ["@limuen/viteconfig#build"],
+      "outputs": ["dist/**"],
+      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+    },
+    "dev:alipay": {
+      "dependsOn": ["^dev:alipay"],
+      "persistent": true,
+      "cache": false
+    },
+    "build:alipay": {
+      "dependsOn": ["^build:alipay"],
+      "outputs": []
+    },
+    "dev:tt": {
+      "dependsOn": ["^dev:tt"],
+      "persistent": true,
+      "cache": false
+    },
+    "build:tt": {
+      "dependsOn": ["^build:tt"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "dotEnv": [".env.production.local", ".env.production", ".env.local", ".env"]
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": ["dist/**"],
+      "dotEnv": [".env.test.local", ".env.test", ".env.local", ".env"]
+    },
+    "lint": {
+      "dependsOn": []
+    }
+  }
+}

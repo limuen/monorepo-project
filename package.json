@@ -1,0 +1,73 @@
+{
+  "name": "monorepo-project",
+  "private": true,
+  "author": {
+    "name": "limuen",
+    "email": "limuen_dev@163.com"
+  },
+  "scripts": {
+    "dev": "dotenv -e .env -e .env.development -- turbo dev",
+    "dev:alipay": "dotenv -e .env -e .env.development -- turbo dev:alipay --filter miniLocalLiftProject",
+    "build:alipay": "dotenv -e .env -e .env.production -- turbo build:alipay --filter miniLocalLiftProject",
+    "dev:tt": "dotenv -e .env -e .env.development -- turbo dev:tt --filter miniLocalLiftProject",
+    "build:tt": "dotenv -e .env -e .env.production -- turbo dev:tt --filter miniLocalLiftProject",
+    "build": "dotenv -e .env -e .env.production -- turbo build",
+    "test": "dotenv -e .env -e .env.test -- turbo test",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged",
+    "commit": "git add -A && git pull && git-cz && git push"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
+    "@turbo/gen": "^1.11.3",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "autoprefixer": "^10.4.17",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.8.0",
+    "dotenv-cli": "^7.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
+    "postcss-html": "^1.6.0",
+    "postcss-less": "^6.0.0",
+    "postcss-preset-env": "^9.3.0",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "turbo": "latest",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@limuen/stores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "immer": "^10.0.3",
+    "zustand": "4.5.2",
+    "react-router-dom": "^6.21.3"
+  }
+}

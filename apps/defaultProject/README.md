@@ -1,0 +1,3 @@
+# defaultProject
+
+此项目的存在目的是使用vite创建项目，在packages/viteconfig封装好以后，vite不支持引入ts，所以得重新打包就得借助于这个项目然后引入的是打包以后的js，具体在turbo.json里

@@ -1,0 +1,12 @@
+export interface {{ componentName }}Props {
+  children?: React.ReactNode;
+}
+
+export const {{ componentName }}: React.FC<{{ componentName }}Props> = ({ children }) => {
+  return (
+    <div>
+      <h1>{{ componentName }}</h1>
+      {children}
+    </div>
+  );
+};

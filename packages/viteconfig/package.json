@@ -1,0 +1,26 @@
+{
+  "name": "@limuen/viteconfig",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "main": "dist/vite.config.js",
+  "types": "dist/vite.config.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite": "5.1.5",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "@limuen/tsconfig": "workspace:*"
+  }
+}

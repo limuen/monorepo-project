@@ -1,0 +1,15 @@
+{
+  "name": "@limuen/utils",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@limuen/tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@limuen/tsconfig/base.json",
+  "compilerOptions": {
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["./src", "./types", "./config", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compileOnSave": false
+}

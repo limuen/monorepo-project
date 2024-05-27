@@ -1,0 +1,25 @@
+{
+  "name": "defaultProject",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "@limuen/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "vite": "5.1.5",
+    "@limuen/viteconfig": "workspace:*",
+    "@limuen/tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "mini_locallife_pro",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
