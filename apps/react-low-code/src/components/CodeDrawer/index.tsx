@@ -12,7 +12,7 @@ export interface CodeDrawerRef {
   open: (code: string) => void;
 }
 
-export const CodeDrawer = forwardRef<CodeDrawerRef>((_props: any, ref) => {
+export const CodeDrawer = forwardRef<CodeDrawerRef>((_, ref) => {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
 
