@@ -125,8 +125,8 @@ importers:
         specifier: ^18.2.17
         version: 18.2.19
       vite:
-        specifier: 5.1.5
-        version: 5.1.5(@types/node@18.19.24)
+        specifier: 5.2.0
+        version: 5.2.0(@types/node@18.19.24)
 
   apps/miniLocalLiftProject:
     dependencies:
@@ -5826,7 +5826,7 @@ packages:
       '@vue/shared': 3.4.21
       estree-walker: 2.0.2
       magic-string: 0.30.8
-      postcss: 8.4.35
+      postcss: 8.4.38
       source-map-js: 1.0.2
     dev: true
 
@@ -18403,8 +18403,8 @@ packages:
       - supports-color
     dev: false
 
-  /vite@5.1.5(@types/node@18.19.24):
-    resolution: {integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==}
+  /vite@5.2.0(@types/node@18.19.24):
+    resolution: {integrity: sha512-xMSLJNEjNk/3DJRgWlPADDwaU9AgYRodDH2t6oENhJnIlmU9Hx1Q6VpjyXua/JdMw1WJRbnAgHJ9xgET9gnIAg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -18432,8 +18432,8 @@ packages:
         optional: true
     dependencies:
       '@types/node': 18.19.24
-      esbuild: 0.19.12
-      postcss: 8.4.35
+      esbuild: 0.20.2
+      postcss: 8.4.38
       rollup: 4.13.0
     optionalDependencies:
       fsevents: 2.3.3

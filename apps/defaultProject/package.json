@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
-    "vite": "5.1.5",
+    "vite": "5.2.0",
     "@limuen/viteconfig": "workspace:*",
     "@limuen/tsconfig": "workspace:*"
   }
