@@ -2,7 +2,7 @@ import { message } from "antd";
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, InternalAxiosRequestConfig, AxiosResponse } from "axios";
 import { useUserStore } from "@limuen/stores";
 import { removeEmptyValues } from "@limuen/utils";
-import { showFullScreenLoading, tryHideFullScreenLoading } from "./loading/fullScree";
+import { showFullScreenLoading, tryHideFullScreenLoading } from "./loading/fullScreen";
 import { ResultData } from "./interface";
 import { ResultEnum } from "./enums/httpEnum";
 import { checkStatus } from "./helper/checkStatus";
