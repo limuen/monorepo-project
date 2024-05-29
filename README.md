@@ -115,7 +115,7 @@ Turborepo 为开发人员提供了一种以常规方式显式指定任务关系�
   "pipeline": {
     "defaultProject#dev": {
       "dependsOn": [
-        "@youthvip/viteconfig#dev"
+        "@limuen/viteconfig#dev"
       ],
       "cache": false,
       "persistent": true,
@@ -128,7 +128,7 @@ Turborepo 为开发人员提供了一种以常规方式显式指定任务关系�
     },
     "defaultProject#build": {
       "dependsOn": [
-        "@youthvip/viteconfig#build"
+        "@limuen/viteconfig#build"
       ],
       "outputs": [
         "dist/**"
@@ -214,7 +214,7 @@ Turborepo 为开发人员提供了一种以常规方式显式指定任务关系�
 }
 ```
 
-因为 apps/defaultProject 依赖于@youthvip/viteconfig，所以我们当前 defaultProject 子包的 build 存在依赖关系，根据 build 的 dependsOn 配置，会先执行依赖项的 build 命令，也就是@youthvip/viteconfig 的 build 命令，依赖项执行完后才会执行 defaultProject 的 build 命令。
+因为 apps/defaultProject 依赖于@limuen/viteconfig，所以我们当前 defaultProject 子包的 build 存在依赖关系，根据 build 的 dependsOn 配置，会先执行依赖项的 build 命令，也就是@limuen/viteconfig 的 build 命令，依赖项执行完后才会执行 defaultProject 的 build 命令。
 如果我们不添加`"dependsOn": ["^build"]`数组中的`‘^’`那么就代表我们当前只需要执行我们自己的 build 命令
 
 ## 命令行的使用
