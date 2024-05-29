@@ -34,37 +34,37 @@ export function removeEmptyValues(obj: Record<string, any>) {
 }
 
 /**
- * 生成随机字符串
+ * 生成UUID
  */
-export function uuid(len: number, radix?: number) {
-  let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
-  let uuid = [],
-    i;
-  radix = radix || chars.length;
+export const uuid = (): string => {
+  let d: number = Date.now();
 
-  if (len) {
-    // Compact form
-    for (i = 0; i < len; i++) uuid[i] = chars[0 | (Math.random() * radix)];
-  } else {
-    // rfc4122, version 4 form
-    let r;
+  const d2: number = (performance && performance.now && performance.now() * 1000) || 0;
 
-    // rfc4122 requires these characters
-    uuid[8] = uuid[13] = uuid[18] = uuid[23] = "-";
-    uuid[14] = "4";
+  return "ddxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c: string) => {
+    let r: number = Math.random() * 16;
 
-    // Fill in random data.  At i==19 set the high bits of clock sequence as
-    // per rfc4122, sec. 4.1.5
-    for (i = 0; i < 36; i++) {
-      if (!uuid[i]) {
-        r = 0 | (Math.random() * 16);
-        uuid[i] = chars[i == 19 ? (r & 0x3) | 0x8 : r];
-      }
+    if (d > 0) {
+      r = (d + r) % 16 | 0;
+      d = Math.floor(d / 16);
+    } else {
+      r = (d2 + r) % 16 | 0;
+      d = Math.floor(d2 / 16);
     }
-  }
 
-  return uuid.join("");
-}
+    const v: number = c === "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+};
+
+/**
+ * 生成短UUID
+ */
+export const shortUuid = () => {
+  return "xxxxxx".replace(/x/g, function () {
+    return Math.floor(Math.random() * 16).toString(16);
+  });
+};
 
 /**
  * 指定返回字符串长度，并添加...
@@ -76,3 +76,31 @@ export function interceptString(str: string = "", place: number, isEllipsis = tr
   }
   return str.substr(0, place);
 }
+
+/**
+ * @description 下载文件
+ * @param fileName 文件名
+ * @param content 文件内容
+ * @param fileType 文件类型
+ */
+export const downloadFile = (fileName: string, content: string, fileType = "text/plain") => {
+  // 创建Blob对象表示要下载的数据
+  const blob = new Blob([content], { type: fileType });
+
+  // 创建一个指向Blob的URL
+  const url = URL.createObjectURL(blob);
+
+  // 创建隐藏的可下载链接
+  const link = document.createElement("a");
+  link.style.display = "none";
+  link.href = url;
+  link.download = fileName;
+
+  // 触发点击以下载文件
+  document.body.appendChild(link);
+  link.click();
+
+  // 清理
+  window.URL.revokeObjectURL(url);
+  document.body.removeChild(link);
+};

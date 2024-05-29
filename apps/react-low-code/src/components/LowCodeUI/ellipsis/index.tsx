@@ -8,8 +8,7 @@ interface EllipsisProps {
   [key: string]: any;
 }
 
-const Ellipsis: React.FC<EllipsisProps> = props => {
-  const { title, children, ...restProps } = props;
+const Ellipsis: React.FC<EllipsisProps> = ({ title, children, ...restProps }) => {
   const titleNode = title || children;
   const childrenNode = children || title;
   const containerRef = useRef<HTMLDivElement>(null);

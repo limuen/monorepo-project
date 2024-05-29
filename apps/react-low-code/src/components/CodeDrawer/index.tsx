@@ -8,11 +8,7 @@ import "highlight.js/styles/atom-one-dark.min.css";
 highlight.registerLanguage("typescript", typescript);
 highlight.registerLanguage("xml", xml);
 
-export interface CodeDrawerRef {
-  open: (code: string) => void;
-}
-
-export const CodeDrawer = forwardRef<CodeDrawerRef>((_, ref) => {
+const CodeDrawer = forwardRef((_, ref) => {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState("");
 
@@ -44,3 +40,5 @@ export const CodeDrawer = forwardRef<CodeDrawerRef>((_, ref) => {
     </Drawer>
   );
 });
+
+export default CodeDrawer;

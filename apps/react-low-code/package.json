@@ -10,19 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
+    "@limuen/utils": "workspace:*",
     "ahooks": "^3.8.0",
     "antd": "^5.15.3",
     "dayjs": "^1.11.11",
     "highlight.js": "^11.9.0",
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3"
   },
   "devDependencies": {
     "@limuen/tsconfig": "workspace:*",
     "@limuen/viteconfig": "workspace:*",
+    "@types/prettier": "^2.6.2",
     "@types/react": "^18.2.66",
+    "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dom": "^18.2.22",
+    "prettier": "^2.6.2",
     "vite": "^5.2.0"
   }
 }
