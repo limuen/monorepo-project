@@ -230,6 +230,8 @@ Turborepo 为开发人员提供了一种以常规方式显式指定任务关系�
 ```js
 pnpm run dev --filter [name] # name 为项目名称
 pnpm run build --filter [name] # name 为项目名称
+pnpm add [packageName] --filter [name] # packageName 为包名，name 为项目名称
+pnpm add [packageName] --filter [packageName] # 第一个 packageName 要安装的包名 第二个是在他下面的package.json安装第一个 packageName的依赖
 ```
 
 ### `--force`
