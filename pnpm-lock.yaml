@@ -266,6 +266,9 @@ importers:
       '@ant-design/icons':
         specifier: ^5.3.7
         version: 5.3.7(react-dom@18.2.0)(react@18.2.0)
+      '@babel/standalone':
+        specifier: ^7.24.0
+        version: 7.24.6
       '@limuen/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -300,6 +303,9 @@ importers:
       '@limuen/viteconfig':
         specifier: workspace:*
         version: link:../../packages/viteconfig
+      '@types/babel__standalone':
+        specifier: ^7.1.7
+        version: 7.1.7
       '@types/prettier':
         specifier: ^2.6.2
         version: 2.7.3
@@ -1844,6 +1850,11 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
+
+  /@babel/standalone@7.24.6:
+    resolution: {integrity: sha512-ch8nbtobUPLvSLKdG2s8pVAqS1zUc+mt7UE9k8/xpupvETbAFOaoqo0QcpgVD/f0xkMkbUnqedVY5eeVWOqtjw==}
+    engines: {node: '>=6.9.0'}
+    dev: false
 
   /@babel/template@7.24.0:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
@@ -5204,6 +5215,12 @@ packages:
     resolution: {integrity: sha512-ASsj+tpEDsEiFr1arWrlN6V3mdfjRMZt6LtK/Vp/kreFLnr5QH5+DhvD5nINYZXzwJvXeGq+05iUXcAzVrqWtw==}
     dependencies:
       '@babel/types': 7.24.0
+    dev: true
+
+  /@types/babel__standalone@7.1.7:
+    resolution: {integrity: sha512-4RUJX9nWrP/emaZDzxo/+RYW8zzLJTXWJyp2k78HufG459HCz754hhmSymt3VFOU6/Wy+IZqfPvToHfLuGOr7w==}
+    dependencies:
+      '@types/babel__core': 7.20.5
     dev: true
 
   /@types/babel__template@7.4.4:
