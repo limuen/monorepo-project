@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FormColumn } from "..";
 import { Form } from "antd";
 import { uuid } from "@limuen/utils";
-import { FormAttribute } from "../component/FormGlobalControl";
+import { FormAttribute } from "../components/FormGlobalControl";
 
 export const defaultFormColumns: FormColumn[] = [{ label: "标题", name: "title", type: "input", options: [], key: uuid() }];
 

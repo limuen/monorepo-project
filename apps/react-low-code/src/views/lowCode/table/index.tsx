@@ -8,10 +8,10 @@ import { StorageNameMap } from "@/constants/storageNames";
 import { AnyObject } from "@/types";
 import { downloadFile, uuid } from "@limuen/utils";
 import { $eval } from "@/utils/eval";
-import TableBody from "./component/TableBody";
-import TableColumnControl from "./component/TableColumnControl";
-import TableGlobalControl from "./component/TableGlobalControl";
-import { TableAttribute } from "./component/TableGlobalControl";
+import TableBody from "./components/TableBody";
+import TableColumnControl from "./components/TableColumnControl";
+import TableGlobalControl from "./components/TableGlobalControl";
+import { TableAttribute } from "./components/TableGlobalControl";
 
 import { useTableHook } from "./hook/table";
 import { getTableTemplate } from "./utils/template";

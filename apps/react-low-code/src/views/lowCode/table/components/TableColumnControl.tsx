@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { IColumnType } from "../";
 import { CloseOutlined } from "@ant-design/icons";
-import Selection from "@/components/LowCodeUI/selection";
+import Selection from "@/components/Selection";
 import { Button, Checkbox, Col, Form, Input, Popconfirm, Row, Select } from "antd";
 import { AnyObject } from "@/types";
 import { shortUuid } from "@limuen/utils";

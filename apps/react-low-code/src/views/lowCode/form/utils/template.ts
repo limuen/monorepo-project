@@ -1,6 +1,6 @@
 import { FormColumn } from "..";
 import { prettierCode } from "@/utils";
-import { FormAttribute } from "../component/FormGlobalControl";
+import { FormAttribute } from "../components/FormGlobalControl";
 
 export interface TemplateFormAttribute extends FormAttribute {
   columns: FormColumn[];

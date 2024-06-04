@@ -4,7 +4,7 @@ import { ColumnType } from "antd/lib/table";
 import { IColumnType } from "../";
 import { AnyObject } from "@/types";
 import { shortUuid, uuid } from "@limuen/utils";
-import { TableAttribute } from "../component/TableGlobalControl";
+import { TableAttribute } from "../components/TableGlobalControl";
 
 // 在modal模板需要用到Table，复用代码封装了Table Hook
 export const useTableHook = () => {

@@ -1,4 +1,4 @@
-import Selection from "../LowCodeUI/selection";
+import Selection from "../Selection";
 import { Form, Input, Select, Space } from "antd";
 import { extensionList } from "@/views/lowCode/form/utils/constants";
 

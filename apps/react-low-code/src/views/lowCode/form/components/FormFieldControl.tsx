@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { FormColumn } from "..";
 import { CloseOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Select, Space } from "antd";
-import Selection from "@/components/LowCodeUI/selection";
-import Ellipsis from "@/components/LowCodeUI/ellipsis";
+import Selection from "@/components/Selection";
+import Ellipsis from "@/components/Ellipsis";
 import { FormTypeList } from "../utils/constants";
 
 interface FormFieldControlProps {
@@ -12,7 +12,7 @@ interface FormFieldControlProps {
   setColumns: (columns: FormColumn[]) => void;
 }
 
-export const FormFieldControl: React.FC<FormFieldControlProps> = ({ currentFormIndex, columns, setColumns }) => {
+const FormFieldControl: React.FC<FormFieldControlProps> = ({ currentFormIndex, columns, setColumns }) => {
   const [form] = Form.useForm();
   const type = Form.useWatch("type", { form: form });
 
@@ -111,3 +111,5 @@ export const FormFieldControl: React.FC<FormFieldControlProps> = ({ currentFormI
     </Selection>
   );
 };
+
+export default FormFieldControl;

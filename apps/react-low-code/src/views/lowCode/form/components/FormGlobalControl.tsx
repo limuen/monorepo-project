@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Selection from "@/components/LowCodeUI/selection";
+import Selection from "@/components/Selection";
 import { Form, Input, Radio, Select, Switch } from "antd";
 import GlobalControl from "@/components/GlobalControl";
 import { labelAlignList, layoutList, variantList } from "../utils/constants";

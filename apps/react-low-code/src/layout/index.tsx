@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
+import type { MenuProps } from "antd";
 
 interface MenuItem {
   key: string;
@@ -33,12 +34,25 @@ const Layout: React.FC = () => {
     {
       key: "/dashboard",
       label: "首页"
+    },
+    {
+      key: "https://github.com/limuen/monorepo-project",
+      label: "GitHub"
     }
   ];
 
   useEffect(() => {
     setSelectedKeys([location.pathname]);
-  }, []);
+  }, [location.pathname]);
+
+  const handleMenuClick: MenuProps["onClick"] = ({ key }) => {
+    if (key.startsWith("http")) {
+      window.open(key, "_blank");
+    } else {
+      setSelectedKeys([key]);
+      navigate(key);
+    }
+  };
 
   return (
     <div style={{ display: "flex", overflow: "hidden" }}>
@@ -51,10 +65,7 @@ const Layout: React.FC = () => {
           mode="inline"
           selectedKeys={selectedKeys}
           items={items}
-          onClick={({ key }: any) => {
-            setSelectedKeys([key]);
-            navigate(key);
-          }}
+          onClick={handleMenuClick}
           style={{
             width: 100,
             height: "100%",

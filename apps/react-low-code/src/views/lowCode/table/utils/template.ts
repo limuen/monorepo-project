@@ -1,7 +1,7 @@
 import { IColumnType } from "..";
 import { AnyObject } from "@/types";
 import { prettierCode } from "@/utils";
-import { TableAttribute } from "../component/TableGlobalControl";
+import { TableAttribute } from "../components/TableGlobalControl";
 
 export interface TemplateTableAttribute extends TableAttribute {
   columns: IColumnType[];

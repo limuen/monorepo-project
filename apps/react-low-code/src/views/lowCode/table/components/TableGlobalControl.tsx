@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CloseOutlined } from "@ant-design/icons";
-import Selection from "@/components/LowCodeUI/selection";
+import Selection from "@/components/Selection";
 import { Button, Checkbox, Form, Input, TablePaginationConfig } from "antd";
 import GlobalControl from "@/components/GlobalControl";
 import { AnyObject } from "src/types";
