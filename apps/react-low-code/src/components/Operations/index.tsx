@@ -21,7 +21,7 @@ const Operations: React.FC<OperationsProps> = ({ type, saveTemplate, previewCode
         保存
       </Button>
       <Button type="primary" onClick={() => codeDrawerRef.current?.open(previewCode())}>
-        预览
+        预览代码
       </Button>
       <Button type="primary" onClick={exportCode}>
         导出代码
