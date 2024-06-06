@@ -1,9 +1,9 @@
 import { useEffect } from "react";
+import { Button, Checkbox, Form, Input, TablePaginationConfig } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import Selection from "@/components/Selection";
-import { Button, Checkbox, Form, Input, TablePaginationConfig } from "antd";
 import GlobalControl from "@/components/GlobalControl";
-import { AnyObject } from "src/types";
+import { AnyObject } from "@/types";
 import { shortUuid } from "@limuen/utils";
 
 export interface TableAttribute {
@@ -13,7 +13,7 @@ export interface TableAttribute {
   extension: ".tsx" | ".jsx";
   attribute: {
     rowKey?: string;
-    pagination?: TablePaginationConfig;
+    pagination?: false | TablePaginationConfig;
   };
 }
 
@@ -37,6 +37,10 @@ const TableGlobalControl: React.FC<TableGlobalControlProps> = ({
   useEffect(() => {
     form.setFieldsValue({
       ...tableAttribute,
+      attribute: {
+        ...tableAttribute.attribute,
+        pagination: tableAttribute.attribute.pagination !== undefined ? tableAttribute.attribute.pagination : {}
+      },
       dataSource: dataSource.map(item => {
         if (typeof item === "string") {
           return item;
@@ -125,7 +129,7 @@ const TableGlobalControl: React.FC<TableGlobalControlProps> = ({
           </Form.List>
         </Form.Item>
         <Form.Item label="分页" name={["attribute", "pagination"]} valuePropName="checked">
-          <Checkbox />
+          <Checkbox checked={!!tableAttribute.attribute.pagination} />
         </Form.Item>
       </Selection>
 

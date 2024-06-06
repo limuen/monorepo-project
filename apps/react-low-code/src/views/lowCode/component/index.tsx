@@ -6,7 +6,7 @@ import { useFormHook } from "@/views/lowCode/form/hook/form";
 import Operations from "@/components/Operations";
 import TemplateTagList from "@/components/TemplateTagList";
 import { StorageNameMap } from "@/constants/storageNames";
-import { AnyObject } from "src/types";
+import { AnyObject } from "@/types";
 import { downloadFile, uuid } from "@limuen/utils";
 import ComponentBody from "./component/ComponentBody";
 import { ComponentGlobalControl, ComponentAttribute, BodyType } from "./component/ComponentGlobalControl";

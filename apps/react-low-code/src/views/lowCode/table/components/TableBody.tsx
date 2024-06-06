@@ -2,7 +2,7 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { IColumnType } from "../";
 import { PlusOutlined } from "@ant-design/icons";
 import { Button, Table } from "antd";
-import { AnyObject } from "src/types";
+import { AnyObject } from "@/types";
 import { TableAttribute } from "./TableGlobalControl";
 
 export interface TableBodyProps {
