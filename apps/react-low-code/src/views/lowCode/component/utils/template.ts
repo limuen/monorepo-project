@@ -1,7 +1,7 @@
 import { prettierCode } from "@/utils";
 import { TemplateFormAttribute, getFormContent, getFormHookName } from "@/views/lowCode/form/utils/template";
 import { TemplateTableAttribute, getTableColumnsDataSource, getTableContent } from "@/views/lowCode/table/utils/template";
-import { BodyType, ComponentAttribute } from "../component/ComponentGlobalControl";
+import { BodyType, ComponentAttribute } from "../components/ComponentGlobalControl";
 
 export const generateBody = (body: BodyType[], formAttribute: TemplateFormAttribute, tableAttribute: TemplateTableAttribute) => {
   return body.reduce((result, item) => {

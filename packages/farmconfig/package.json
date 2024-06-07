@@ -1,0 +1,21 @@
+{
+  "name": "farmconfig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@farmfe/cli": "^1.0.2",
+    "@farmfe/core": "^1.1.13",
+    "@farmfe/plugin-react": "^1.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "@limuen/tsconfig": "workspace:*"
+  }
+}
