@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "dotenv -e .env -e .env.development -- turbo dev",
+    "dev:weapp": "dotenv -e .env -e .env.development -- turbo dev:weapp --filter MiniProgram-Github",
     "dev:alipay": "dotenv -e .env -e .env.development -- turbo dev:alipay --filter miniLocalLiftProject",
     "build:alipay": "dotenv -e .env -e .env.production -- turbo build:alipay --filter miniLocalLiftProject",
     "dev:tt": "dotenv -e .env -e .env.development -- turbo dev:tt --filter miniLocalLiftProject",

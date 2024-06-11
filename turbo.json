@@ -24,6 +24,11 @@
       "outputs": ["dist/**"],
       "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
+    "dev:weapp": {
+      "dependsOn": ["^dev:weapp"],
+      "persistent": true,
+      "cache": false
+    },
     "dev:alipay": {
       "dependsOn": ["^dev:alipay"],
       "persistent": true,
