@@ -1,28 +1,28 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDotEnv": [".env"],
-  "pipeline": {
+  "globalEnv": [".env"],
+  "tasks": {
     "defaultProject#dev": {
       "dependsOn": ["@limuen/viteconfig#build"],
       "cache": false,
       "persistent": true,
-      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
     "defaultProject#build": {
       "dependsOn": ["@limuen/viteconfig#build"],
       "outputs": ["dist/**"],
-      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
     "react-low-code#dev": {
       "dependsOn": ["@limuen/viteconfig#build"],
       "cache": false,
       "persistent": true,
-      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
     "react-low-code#build": {
       "dependsOn": ["@limuen/viteconfig#build"],
       "outputs": ["dist/**"],
-      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
     "dev:weapp": {
       "dependsOn": ["^dev:weapp"],
@@ -50,17 +50,17 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dotEnv": [".env.development.local", ".env.development", ".env.local", ".env"]
+      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"],
-      "dotEnv": [".env.production.local", ".env.production", ".env.local", ".env"]
+      "env": [".env.production.local", ".env.production", ".env.local", ".env"]
     },
     "test": {
       "dependsOn": ["^test"],
       "outputs": ["dist/**"],
-      "dotEnv": [".env.test.local", ".env.test", ".env.local", ".env"]
+      "env": [".env.test.local", ".env.test", ".env.local", ".env"]
     },
     "lint": {
       "dependsOn": []

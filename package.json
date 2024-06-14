@@ -72,6 +72,6 @@
     }
   },
   "dependencies": {
-    "@turbo/codemod": "1.13.3"
+    "@turbo/codemod": "2.0.3"
   }
 }
