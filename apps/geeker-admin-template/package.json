@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "serve": "vite",
+    "build": "tsc && vite build",
     "build:dev": "vue-tsc && vite build --mode development",
     "build:test": "vue-tsc && vite build --mode test",
     "build:pro": "vue-tsc && vite build --mode production",
