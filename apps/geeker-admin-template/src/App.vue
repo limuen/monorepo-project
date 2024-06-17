@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :locale="locale" :size="assemblySize" :button="buttonConfig">
+  <el-config-provider :size="assemblySize" :button="buttonConfig">
     <router-view></router-view>
   </el-config-provider>
 </template>
