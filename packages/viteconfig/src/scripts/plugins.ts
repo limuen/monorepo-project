@@ -1,4 +1,5 @@
 import { PluginOption } from "vite";
+import react from "@vitejs/plugin-react-swc";
 import checker from "vite-plugin-checker";
 import { visualizer } from "rollup-plugin-visualizer";
 import viteCompression from "vite-plugin-compression";
@@ -11,6 +12,7 @@ export const createVitePlugins = (viteEnv: ViteEnv): (PluginOption | PluginOptio
   const { VITE_REPORT } = viteEnv;
 
   return [
+    react(),
     // esLint error messages are displayed on the browser interface
     checker({ typescript: true }),
     // Create a packaged compression configuration

@@ -13,6 +13,7 @@
     "build": "tsup"
   },
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "rollup-plugin-visualizer": "^5.12.0",
     "vite": "^5.2.11",
     "vite-plugin-checker": "^0.6.2",

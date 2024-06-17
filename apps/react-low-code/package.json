@@ -13,7 +13,6 @@
     "@ant-design/icons": "^5.3.7",
     "@babel/standalone": "^7.24.0",
     "@limuen/utils": "workspace:*",
-    "@vitejs/plugin-react-swc": "^3.7.0",
     "ahooks": "^3.8.0",
     "antd": "^5.15.3",
     "dayjs": "^1.11.11",
