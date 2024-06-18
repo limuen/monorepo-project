@@ -235,9 +235,15 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.3.0
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.7.0(@swc/helpers@0.5.11)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
       vite:
         specifier: 5.2.0
         version: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
+      vite-plugin-checker:
+        specifier: ^0.6.2
+        version: 0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
 
   apps/miniLocalLiftProject:
     dependencies:
@@ -14780,6 +14786,13 @@ snapshots:
       '@use-gesture/core': 10.2.20
       react: 18.3.1
 
+  '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.11)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))':
+    dependencies:
+      '@swc/core': 1.6.1(@swc/helpers@0.5.11)
+      vite: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
+    transitivePeerDependencies:
+      - '@swc/helpers'
+
   '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.11)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))':
     dependencies:
       '@swc/core': 1.6.1(@swc/helpers@0.5.11)
@@ -22560,6 +22573,31 @@ snapshots:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+
+  vite-plugin-checker@0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)):
+    dependencies:
+      '@babel/code-frame': 7.24.7
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      chokidar: 3.6.0
+      commander: 8.3.0
+      fast-glob: 3.3.2
+      fs-extra: 11.2.0
+      npm-run-path: 4.0.1
+      semver: 7.6.2
+      strip-ansi: 6.0.1
+      tiny-invariant: 1.3.3
+      vite: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
+      vscode-languageclient: 7.0.0
+      vscode-languageserver: 7.0.0
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    optionalDependencies:
+      eslint: 8.57.0
+      meow: 9.0.0
+      optionator: 0.9.4
+      stylelint: 16.6.1(typescript@5.4.5)
+      typescript: 5.4.5
 
   vite-plugin-checker@0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)):
     dependencies:
