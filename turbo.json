@@ -24,17 +24,6 @@
       "outputs": ["dist/**"],
       "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
-    "geeker-admin-template#dev": {
-      "dependsOn": ["@limuen/viteconfig#build"],
-      "cache": false,
-      "persistent": true,
-      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
-    },
-    "geeker-admin-template#build": {
-      "dependsOn": ["@limuen/viteconfig#build"],
-      "outputs": ["dist/**"],
-      "env": [".env.development.local", ".env.development", ".env.local", ".env"]
-    },
     "dev:weapp": {
       "dependsOn": ["^dev:weapp"],
       "persistent": true,

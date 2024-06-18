@@ -235,15 +235,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.3.0
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.7.0(@swc/helpers@0.5.11)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
       vite:
         specifier: 5.2.0
         version: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
-      vite-plugin-checker:
-        specifier: ^0.6.2
-        version: 0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
 
   apps/miniLocalLiftProject:
     dependencies:
@@ -435,18 +429,12 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.22
         version: 18.3.0
-      '@vitejs/plugin-react-swc':
-        specifier: ^3.5.0
-        version: 3.7.0(@swc/helpers@0.5.11)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
       prettier:
         specifier: ^2.6.2
         version: 2.8.8
       vite:
         specifier: ^5.2.11
         version: 5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
-      vite-plugin-checker:
-        specifier: ^0.6.2
-        version: 0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
 
   packages/farmconfig:
     dependencies:
@@ -523,12 +511,18 @@ importers:
 
   packages/viteconfig:
     dependencies:
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.5.0
+        version: 3.7.0(@swc/helpers@0.5.11)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
       rollup-plugin-visualizer:
         specifier: ^5.12.0
         version: 5.12.0(rollup@4.18.0)
       vite:
         specifier: ^5.2.11
         version: 5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
+      vite-plugin-checker:
+        specifier: ^0.6.2
+        version: 0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
       vite-plugin-compression:
         specifier: ^0.5.1
         version: 0.5.1(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))
@@ -538,7 +532,7 @@ importers:
         version: link:../tsconfig
       tsup:
         specifier: ^8.0.1
-        version: 8.1.0(@swc/core@1.6.1)(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1)(@types/node@18.19.34)(typescript@5.4.5))(typescript@5.4.5)
+        version: 8.1.0(@swc/core@1.6.1(@swc/helpers@0.5.11))(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5))(typescript@5.4.5)
 
 packages:
 
@@ -14786,13 +14780,6 @@ snapshots:
       '@use-gesture/core': 10.2.20
       react: 18.3.1
 
-  '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.11)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))':
-    dependencies:
-      '@swc/core': 1.6.1(@swc/helpers@0.5.11)
-      vite: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
-    transitivePeerDependencies:
-      - '@swc/helpers'
-
   '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.11)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1))':
     dependencies:
       '@swc/core': 1.6.1(@swc/helpers@0.5.11)
@@ -20260,6 +20247,14 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5)):
+    dependencies:
+      lilconfig: 3.1.2
+      yaml: 2.4.5
+    optionalDependencies:
+      postcss: 8.4.38
+      ts-node: 10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5)
+
   postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1)(@types/node@18.19.34)(typescript@5.4.5)):
     dependencies:
       lilconfig: 3.1.2
@@ -22248,6 +22243,27 @@ snapshots:
     optionalDependencies:
       '@swc/core': 1.3.96(@swc/helpers@0.5.11)
 
+  ts-node@10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5):
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@tsconfig/node10': 1.0.11
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 18.19.34
+      acorn: 8.12.0
+      acorn-walk: 8.3.3
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.4.5
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    optionalDependencies:
+      '@swc/core': 1.6.1(@swc/helpers@0.5.11)
+    optional: true
+
   ts-node@10.9.2(@swc/core@1.6.1)(@types/node@18.19.34)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -22292,6 +22308,30 @@ snapshots:
   tslib@2.6.3: {}
 
   tsscmp@1.0.6: {}
+
+  tsup@8.1.0(@swc/core@1.6.1(@swc/helpers@0.5.11))(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5))(typescript@5.4.5):
+    dependencies:
+      bundle-require: 4.2.1(esbuild@0.21.5)
+      cac: 6.7.14
+      chokidar: 3.6.0
+      debug: 4.3.5
+      esbuild: 0.21.5
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1(@swc/helpers@0.5.11))(@types/node@18.19.34)(typescript@5.4.5))
+      resolve-from: 5.0.0
+      rollup: 4.18.0
+      source-map: 0.8.0-beta.0
+      sucrase: 3.35.0
+      tree-kill: 1.2.2
+    optionalDependencies:
+      '@swc/core': 1.6.1(@swc/helpers@0.5.11)
+      postcss: 8.4.38
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
 
   tsup@8.1.0(@swc/core@1.6.1)(postcss@8.4.38)(ts-node@10.9.2(@swc/core@1.6.1)(@types/node@18.19.34)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
@@ -22573,31 +22613,6 @@ snapshots:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
-
-  vite-plugin-checker@0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)):
-    dependencies:
-      '@babel/code-frame': 7.24.7
-      ansi-escapes: 4.3.2
-      chalk: 4.1.2
-      chokidar: 3.6.0
-      commander: 8.3.0
-      fast-glob: 3.3.2
-      fs-extra: 11.2.0
-      npm-run-path: 4.0.1
-      semver: 7.6.2
-      strip-ansi: 6.0.1
-      tiny-invariant: 1.3.3
-      vite: 5.2.0(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)
-      vscode-languageclient: 7.0.0
-      vscode-languageserver: 7.0.0
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
-    optionalDependencies:
-      eslint: 8.57.0
-      meow: 9.0.0
-      optionator: 0.9.4
-      stylelint: 16.6.1(typescript@5.4.5)
-      typescript: 5.4.5
 
   vite-plugin-checker@0.6.4(eslint@8.57.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.6.1(typescript@5.4.5))(typescript@5.4.5)(vite@5.3.1(@types/node@18.19.34)(less@4.2.0)(lightningcss@1.25.1)(sass@1.77.5)(stylus@0.55.0)(terser@5.31.1)):
     dependencies:
