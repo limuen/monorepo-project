@@ -15,11 +15,13 @@ export const getTableContent = (tableAttribute: TemplateTableAttribute) => {
     const key = item as keyof typeof attribute;
     return `${cur} ${item}="${attribute[key]}"`;
   }, "");
+
   return `<Table columns={columns} dataSource={dataSource} ${tableAttributeString} />`;
 };
 
 export const getTableColumnsDataSource = (tableAttribute: TemplateTableAttribute) => {
   const { columns, dataSource } = tableAttribute;
+
   const columnsString = `[${columns.map((item: any) => {
     return `{${Object.keys(item).reduce((all: string, key: string) => {
       if (["renderString", "title", "dataIndex", "width", "ellipsis"].includes(key) && item[key] !== undefined) {
@@ -29,6 +31,7 @@ export const getTableColumnsDataSource = (tableAttribute: TemplateTableAttribute
       } else return all;
     }, "")}}`;
   })}]`;
+
   return `const columns = ${columnsString}
   const dataSource = ${JSON.stringify(dataSource)}`;
 };

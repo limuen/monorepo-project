@@ -7,8 +7,8 @@ export const getRenderTemplate = (type: "customer" | "time" | "template" | "tool
   const templateMap = {
     customer: () => {
       return `(text, record) => {
-  return text
-}`;
+				return text
+			}`;
     },
     time: () => {
       return `(text) => dayjs(text).format('${TIME_FORMAT}')`;
@@ -18,14 +18,14 @@ export const getRenderTemplate = (type: "customer" | "time" | "template" | "tool
     },
     tooltip: () => {
       return `(text) => <Tooltip title={text}>
-  {text}
-</Tooltip>`;
+			{text}
+		</Tooltip>`;
     },
     map: () => {
       return `(text)=>{
-  const map = {}
-  return map[text]
-}`;
+			const map = {}
+			return map[text]
+		}`;
     }
   };
   return templateMap[type]();

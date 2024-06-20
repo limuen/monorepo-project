@@ -30,14 +30,17 @@ export const getFormContent = (formAttribute: TemplateFormAttribute) => {
     switch: "Switch",
     textArea: "Input.TextArea"
   };
+
   const formItemString = columns.map((column: any) => {
     const { type, options, ...formItemAttribute } = column;
+
     const formItemAttributeString = Object.keys(formItemAttribute).reduce((cur: string, attribute: string) => {
       const value = column[attribute];
       if (attribute === "valuePropName" && !value?.length) return cur;
       if (["rules"].includes(attribute)) return `${cur} ${attribute}={${JSON.stringify(value)}}`;
       return `${cur} ${attribute}="${value}"`;
     }, "");
+
     let componentName = inputMap[type];
     if (formItemAttribute.valuePropName?.length) {
       if (type === "radio") {
@@ -47,6 +50,7 @@ export const getFormContent = (formAttribute: TemplateFormAttribute) => {
         componentName = "Checkbox";
       }
     }
+
     return `<Form.Item ${formItemAttributeString}>
     <${componentName} ${
       !formItemAttribute.valuePropName?.length && ["select", "radio", "checkbox"].includes(type)
@@ -55,6 +59,7 @@ export const getFormContent = (formAttribute: TemplateFormAttribute) => {
     }/>
   </Form.Item>`;
   });
+
   return `<Form form={${form}} ${formAttributeString}>
   ${formItemString.join("")}</Form>`;
 };

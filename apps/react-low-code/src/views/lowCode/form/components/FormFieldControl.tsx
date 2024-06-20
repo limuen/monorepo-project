@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FormColumn } from "..";
+import { FormColumn } from "../";
 import { CloseOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Select, Space } from "antd";
 import Selection from "@/components/Selection";

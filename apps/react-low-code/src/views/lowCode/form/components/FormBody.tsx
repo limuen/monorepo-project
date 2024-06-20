@@ -1,6 +1,6 @@
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { FormInstance } from "antd/es/form";
-import { FormColumn } from "..";
+import { FormColumn } from "../";
 import { PlusOutlined, CloseOutlined } from "@ant-design/icons";
 import { Button, Col, Form, Row } from "antd";
 import FormItem from "@/components/FormItem";
