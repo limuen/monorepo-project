@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import { ColumnType } from "antd/lib/table";
-import { IColumnType } from "../";
+import { IColumnType } from "..";
 import { AnyObject } from "@/types";
 import { shortUuid, uuid } from "@limuen/utils";
 import { TableAttribute } from "../components/TableGlobalControl";

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ColumnType } from "antd/lib/table";
 import { useUpdateEffect } from "ahooks";
 import { Button, Col, Modal, Row } from "antd";
-import { useFormHook } from "../form/hook/form";
+import { useFormHook } from "../form/hook/useForm";
 import Operations from "@/components/Operations";
 import TemplateTagList from "@/components/TemplateTagList";
 import { StorageNameMap } from "@/constants/storageNames";
@@ -20,7 +20,7 @@ import { FormAttribute } from "../form/components/FormGlobalControl";
 import TableColumnControl from "../table/components/TableColumnControl";
 import TableGlobalControl from "../table/components/TableGlobalControl";
 import { TableAttribute } from "../table/components/TableGlobalControl";
-import { useTableHook } from "../table/hook/table";
+import { useTableHook } from "../table/hook/useTable";
 import "./index.less";
 
 interface TemplateList extends ModalAttribute {

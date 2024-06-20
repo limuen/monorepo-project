@@ -13,7 +13,7 @@ import TableColumnControl from "./components/TableColumnControl";
 import TableGlobalControl from "./components/TableGlobalControl";
 import { TableAttribute } from "./components/TableGlobalControl";
 
-import { useTableHook } from "./hook/table";
+import { useTableHook } from "./hook/useTable";
 import { getTableTemplate } from "./utils/template";
 
 export interface IColumnType extends ColumnType<any> {
