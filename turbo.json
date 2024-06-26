@@ -24,29 +24,6 @@
       "outputs": ["dist/**"],
       "env": [".env.development.local", ".env.development", ".env.local", ".env"]
     },
-    "dev:weapp": {
-      "dependsOn": ["^dev:weapp"],
-      "persistent": true,
-      "cache": false
-    },
-    "dev:alipay": {
-      "dependsOn": ["^dev:alipay"],
-      "persistent": true,
-      "cache": false
-    },
-    "build:alipay": {
-      "dependsOn": ["^build:alipay"],
-      "outputs": []
-    },
-    "dev:tt": {
-      "dependsOn": ["^dev:tt"],
-      "persistent": true,
-      "cache": false
-    },
-    "build:tt": {
-      "dependsOn": ["^build:tt"],
-      "outputs": []
-    },
     "dev": {
       "cache": false,
       "persistent": true,
