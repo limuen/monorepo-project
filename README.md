@@ -90,7 +90,7 @@ Turbo 通过其远程缓存功能可以帮助多人远程构建云缓存实现�
 
 ## Turbo 核心概念
 
-## 管道 （tasks）
+## 管道 （tasks）（1.x的版本是pipeline，2.x的版本是tasks）
 
 Turborepo 为开发人员提供了一种以常规方式显式指定任务关系的方法。
 
