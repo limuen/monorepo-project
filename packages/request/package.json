@@ -12,12 +12,14 @@
     "antd": "^5.15.3",
     "axios": "^1.6.0",
     "nprogress": "^0.2.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "qs": "^6.11.2"
   },
   "devDependencies": {
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.19",
+    "@types/qs": "^6.9.11",
     "@limuen/tsconfig": "workspace:*"
   }
 }
