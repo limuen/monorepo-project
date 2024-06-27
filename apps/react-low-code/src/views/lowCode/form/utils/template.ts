@@ -28,7 +28,10 @@ export const getFormContent = (formAttribute: TemplateFormAttribute) => {
     radio: "Radio.Group",
     checkbox: "Checkbox.Group",
     switch: "Switch",
-    textArea: "Input.TextArea"
+		textArea: "Input.TextArea",
+		button: "Button",
+    tag: "Tag",
+
   };
 
   const formItemString = columns.map((column: any) => {
