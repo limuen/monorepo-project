@@ -14,22 +14,23 @@
     "@babel/standalone": "^7.24.0",
     "@limuen/utils": "workspace:*",
     "ahooks": "^3.8.0",
-    "antd": "^5.15.3",
+    "antd": "^5.18.3",
     "dayjs": "^1.11.11",
     "highlight.js": "^11.9.0",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-beautiful-dnd": "^13.1.1",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0"
   },
   "devDependencies": {
     "@limuen/tsconfig": "workspace:*",
     "@limuen/viteconfig": "workspace:*",
     "@types/babel__standalone": "^7.1.7",
     "@types/prettier": "^2.6.2",
-    "@types/react": "^18.2.66",
+    "@types/react": "^18.3.3",
     "@types/react-beautiful-dnd": "^13.1.8",
-    "@types/react-dom": "^18.2.22",
+    "@types/react-dom": "^18.3.0",
+    "less": "^4.2.0",
     "prettier": "^2.6.2",
     "vite": "^5.3.1"
   }
