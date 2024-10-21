@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
         <div className="btn-container">
           <NavLink to="/lowcode/table">
             <Button type="primary" size="large">
-              开始上路
+              出发
             </Button>
           </NavLink>
         </div>

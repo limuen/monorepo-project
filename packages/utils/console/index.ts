@@ -10,7 +10,7 @@ interface logConfigThemeIF {
   backgroundColor?: string;
 }
 
-const logTypes = {
+export const logTypes = {
   DEBUG: {
     name: "DEBUG",
     theme: {
@@ -40,7 +40,7 @@ const logTypes = {
 };
 
 // 开发工具中使用 css 来区分不同日志的样式
-const createLogStyle = (theme: logConfigThemeIF) => {
+export const createLogStyle = (theme: logConfigThemeIF) => {
   let style = `padding: 5px 0;border-radius: 5px;color: ${theme.color};`;
   if (theme.backgroundColor) {
     style += `padding: 5px;background-color: ${theme.backgroundColor};`;
@@ -49,7 +49,7 @@ const createLogStyle = (theme: logConfigThemeIF) => {
 };
 
 // 添加一段信息用于标记是应用输出的日志
-const createLogPrefix = (type: LogConfigIF, moduleName: string) => {
+export const createLogPrefix = (type: LogConfigIF, moduleName: string) => {
   let message = `[${import.meta.env.VITE_APP_PROJECT_NAME}][${type.name}]`;
   if (moduleName) {
     message += `[${moduleName}]`;
@@ -67,7 +67,7 @@ const _printLogInDevTools = (messages: any, theme: logConfigThemeIF) => {
 // 打印日志
 const _printLog = (type: LogConfigIF, messages: any) => {
   // 生产环境下不执行
-  if (!import.meta.env.VITE_USER_NODE_ENV) {
+  if (!import.meta.env.VITE_NODE_ENV) {
     return;
   }
   const title = isString(messages[0]) ? messages[0] : "";

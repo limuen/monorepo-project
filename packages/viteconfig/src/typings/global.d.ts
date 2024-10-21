@@ -2,7 +2,7 @@
 declare type Recordable<T = any> = Record<string, T>;
 
 declare interface ViteEnv {
-  VITE_ENV: "dev" | "" | "test";
+  VITE_NODE_ENV: "dev" | "prod" | "test";
   VITE_GLOB_APP_TITLE: string;
   VITE_PORT: number;
   VITE_OPEN: boolean;

@@ -1,7 +1,10 @@
 /**
  * @description: Check if a value is of a certain type.
  */
-export function is(val: unknown, type: string) {
+export function is(val: unknown, type: string): boolean {
+  if (val === null) {
+    return type === "Null"; // 当 val 是 null 时，仅当 type 为 "Null" 时返回 true
+  }
   return Object.prototype.toString.call(val) === `[object ${type}]`;
 }
 
@@ -58,7 +61,7 @@ export function isAsyncFunction<T = any>(val: unknown): val is Promise<T> {
  * @description: Check if a value is a promise.
  */
 export function isPromise<T = any>(val: unknown): val is Promise<T> {
-  return is(val, "Promise") && isObject(val) && isFunction(val.then) && isFunction(val.catch);
+  return val instanceof Promise;
 }
 
 /**
@@ -93,14 +96,14 @@ export const isClient = () => {
  * @description: Checks if it's a browser.
  */
 export const isWindow = (val: any): val is Window => {
-  return typeof window !== "undefined" && is(val, "Window");
+  return typeof window !== "undefined" && val === window;
 };
 
 /**
  * @description: Checks if it's an element.
  */
 export const isElement = (val: unknown): val is Element => {
-  return isObject(val) && !!val.tagName;
+  return val instanceof Element;
 };
 
 /**
@@ -121,7 +124,7 @@ export function isNullOrUnDef(val: unknown): val is null | undefined {
  * @description: Checks if it's a hexadecimal color.
  */
 export const isHexColor = (str: string) => {
-  return /^#?([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/.test(str);
+  return /^#[0-9A-Fa-f]{3}$|^#[0-9A-Fa-f]{6}$/.test(str);
 };
 
 /**

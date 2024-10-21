@@ -2,8 +2,8 @@ import { isString } from "../is";
 
 type StorageKey = keyof StorageMap;
 
-interface StorageMap {
-  mgerp_searchHistory: string[];
+export interface StorageMap {
+  searchHistory: string[];
 }
 
 /**
@@ -11,8 +11,8 @@ interface StorageMap {
  * @param value 本地缓存键名
  * @returns 添加当前环境后的本地缓存键名
  */
-const addEnvSuffix = (value: string) => {
-  const env = import.meta.env.VITE_ENV;
+export const addEnvSuffix = (value: string) => {
+  const env = import.meta.env.VITE_NODE_ENV;
   return env ? `${value}--${env}` : value;
 };
 
