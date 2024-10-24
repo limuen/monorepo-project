@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "immer": "^10.0.3",
-    "zustand": "4.5.2",
+    "zustand": "5.0.0",
     "react-router-dom": "^6.21.3"
   }
 }

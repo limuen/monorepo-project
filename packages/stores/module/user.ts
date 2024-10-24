@@ -10,7 +10,7 @@ export const useUserStore = create<UserStoreState>()(
     persist(
       set => ({
         token: null,
-        loginToRoute: "",
+        loginToRoute: "12312",
         setToken: token =>
           set((state: UserState) => {
             state.token = token;
@@ -27,3 +27,8 @@ export const useUserStore = create<UserStoreState>()(
     )
   )
 );
+
+useUserStore.setState({
+  token: null,
+  loginToRoute: "setState"
+});
