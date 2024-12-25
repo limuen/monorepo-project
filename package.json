@@ -1,6 +1,7 @@
 {
   "name": "monorepo-peoject",
   "private": true,
+  "version": "0.0.1",
   "scripts": {
     "build": "turbo build",
     "dev": "dotenv -e .env -e .env.development -- turbo dev",
@@ -10,7 +11,8 @@
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
     "commit": "git add -A && git pull && git-cz && git push",
-    "test": "vitest"
+    "test": "vitest",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.5.0",
@@ -36,6 +38,7 @@
     "postcss-less": "^6.0.0",
     "postcss-preset-env": "^9.5.14",
     "prettier": "^3.3.2",
+    "standard-version": "^9.5.0",
     "stylelint": "^16.6.1",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard": "^36.0.1",
