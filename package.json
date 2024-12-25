@@ -1,7 +1,7 @@
 {
   "name": "monorepo-peoject",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "scripts": {
     "build": "turbo build",
     "dev": "dotenv -e .env -e .env.development -- turbo dev",
