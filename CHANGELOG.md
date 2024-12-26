@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/limuen/monorepo-project/compare/v0.0.0...v1.0.0) (2024-12-26)
+
+### Features
+
+- 🚀 发版本 ([304fb5a](https://github.com/limuen/monorepo-project/commit/304fb5a003add0a7a7f5910e0a3136ab89b9d83b))
+
 ## 0.0.0 (2024-12-25)
 
 ### Features
