@@ -4,7 +4,9 @@ export const FormTypeList = [
   { value: "radio", label: "单选" },
   { value: "checkbox", label: "多选" },
   { value: "switch", label: "开关" },
-  { value: "textArea", label: "多行文本" }
+  { value: "textArea", label: "多行文本" },
+  { value: "button", label: "按钮" },
+  { value: "tag", label: "标签" },
 ];
 
 export const labelAlignList = [
