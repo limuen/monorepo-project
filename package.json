@@ -15,8 +15,8 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.5.0",
-    "@commitlint/config-conventional": "^18.5.0",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
     "@turbo/gen": "^1.11.3",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
