@@ -3,26 +3,12 @@
   "version": "1.0.1",
   "description": "",
   "type": "module",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
     "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/bundle.esm.js",
-      "require": "./dist/bundle.cjs.js"
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
     "@limuen/tsconfig": "workspace:*",
     "@babel/core": "^7.26.8",
