@@ -7,24 +7,13 @@ export interface StorageMap {
 }
 
 /**
- * 本地缓存添加环境，通过环境区分不同的缓存
- * @param value 本地缓存键名
- * @returns 添加当前环境后的本地缓存键名
- */
-export const addEnvSuffix = (value: string) => {
-  const env = process.env.VITE_NODE_ENV;
-  return env ? `${value}--${env}` : value;
-};
-
-/**
  *
  * @param {String} key 本地缓存中指定的 key
  * @param {unknown} value 需要存储的内容
  */
 export function setStorage<T extends StorageKey>(key: T, value: StorageMap[T]) {
-  const envKey = addEnvSuffix(key);
   const storageValue = isString(value) ? value : JSON.stringify(value);
-  window.localStorage.setItem(envKey, storageValue);
+  window.localStorage.setItem(key, storageValue);
 }
 
 /**
@@ -33,8 +22,7 @@ export function setStorage<T extends StorageKey>(key: T, value: StorageMap[T]) {
  * @param {Boolean} [remove=false] 是否立即移除指定 key 的本地缓存内容 默认为 false
  */
 export function getStorage<T extends StorageKey>(key: T, remove: boolean = false): StorageMap[T] | null {
-  const envKey = addEnvSuffix(key);
-  const storageValue = localStorage.getItem(envKey);
+  const storageValue = localStorage.getItem(key);
   if (remove) removeStorage(key);
   if (storageValue) {
     try {
@@ -52,6 +40,5 @@ export function getStorage<T extends StorageKey>(key: T, remove: boolean = false
  * @param {String} key 本地缓存中指定的 key
  */
 export function removeStorage(key: StorageKey) {
-  const envKey = addEnvSuffix(key);
-  localStorage.removeItem(envKey);
+  localStorage.removeItem(key);
 }
