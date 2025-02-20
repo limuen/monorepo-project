@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeEach, vi } from "vitest";
-import { logInfo, logDebug, logWarn, logError } from "./index";
+import { logInfo, logDebug, logWarn, logError, _printLog } from "./index";
 import { logTypes } from "./index";
 import { createLogStyle, createLogPrefix } from "./index";
 
@@ -58,6 +58,10 @@ describe("createLogPrefix", () => {
 describe("log functions", () => {
   beforeEach(() => {
     console.log = vi.fn(); // Mock console.log
+    // Mock _printLog to ensure it gets called
+    vi.spyOn({ _printLog }, "_printLog").mockImplementation(() => {});
+
+    process.env.VITE_NODE_ENV = "development"; // 确保环境变量设置为开发模式
   });
 
   test("logInfo should call _printLog with INFO type", () => {

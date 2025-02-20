@@ -65,7 +65,7 @@ const _printLogInDevTools = (messages: any, theme: logConfigThemeIF) => {
   console.log(...messages);
 };
 // 打印日志
-const _printLog = (type: LogConfigIF, messages: any) => {
+export const _printLog = (type: LogConfigIF, messages: any) => {
   // 生产环境下不执行
   if (!import.meta.env.VITE_NODE_ENV) {
     return;
