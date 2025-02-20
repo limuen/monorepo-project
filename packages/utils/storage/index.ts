@@ -12,7 +12,7 @@ export interface StorageMap {
  * @returns 添加当前环境后的本地缓存键名
  */
 export const addEnvSuffix = (value: string) => {
-  const env = import.meta.env.VITE_NODE_ENV;
+  const env = process.env.VITE_NODE_ENV;
   return env ? `${value}--${env}` : value;
 };
 
